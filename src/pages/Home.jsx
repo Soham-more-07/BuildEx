@@ -120,6 +120,7 @@ function Home() {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pb-20">
+                {/* E-Commerce Card */}
                 <div className="bg-[#0f0f0f]/80 backdrop-blur-sm border border-gray-800 rounded-2xl p-6 hover:border-[#00d2ff]/60 hover:shadow-[0_0_30px_rgba(0,210,255,0.15)] hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden flex flex-col h-full justify-center">
                   <div className="absolute top-0 right-0 w-16 h-1 bg-gradient-to-l from-[#00d2ff] to-transparent opacity-50 group-hover:opacity-100 transition-opacity"></div>
                   <div className="text-[#00d2ff] mb-4 bg-[#00d2ff]/10 w-12 h-12 rounded-lg flex items-center justify-center border border-[#00d2ff]/20 group-hover:shadow-[0_0_15px_rgba(0,210,255,0.4)] transition-all">
@@ -129,15 +130,23 @@ function Home() {
                   <p className="text-gray-400 text-sm leading-relaxed">Secure, scalable, and highly optimized digital storefronts designed to maximize your conversions.</p>
                 </div>
                 
-                <div className="bg-[#0f0f0f]/80 backdrop-blur-sm border border-gray-800 rounded-2xl p-6 hover:border-[#00d2ff]/60 hover:shadow-[0_0_30px_rgba(0,210,255,0.15)] hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden flex flex-col h-full justify-center">
+                {/* Commercial Business (Thunder Vault) Clickable Card */}
+                <div 
+                  onClick={() => navigate('/demo/thundervault')}
+                  className="cursor-pointer bg-[#0f0f0f]/80 backdrop-blur-sm border border-gray-800 rounded-2xl p-6 hover:border-[#00d2ff]/60 hover:shadow-[0_0_30px_rgba(0,210,255,0.15)] hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden flex flex-col h-full justify-center"
+                >
                   <div className="absolute top-0 right-0 w-16 h-1 bg-gradient-to-l from-[#00d2ff] to-transparent opacity-50 group-hover:opacity-100 transition-opacity"></div>
                   <div className="text-[#00d2ff] mb-4 bg-[#00d2ff]/10 w-12 h-12 rounded-lg flex items-center justify-center border border-[#00d2ff]/20 group-hover:shadow-[0_0_15px_rgba(0,210,255,0.4)] transition-all">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
                   </div>
-                  <h3 className="text-xl font-bold text-white group-hover:text-[#00d2ff] transition-all mb-2">Commercial Business</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">Enterprise-grade internal tools, dashboards, and automated management software for your team.</p>
+                  <h3 className="text-xl font-bold text-white group-hover:text-[#00d2ff] transition-all mb-2">
+                    Commercial Business <span className="text-[#00d2ff] font-extrabold text-xs block mt-1">(Thunder Vault)</span>
+                  </h3>
+                  <p className="text-gray-400 text-sm leading-relaxed mb-4">Enterprise-grade internal tools, dashboards, and automated management software for your team. Click to view demo.</p>
+                  <div className="mt-auto text-[10px] font-black uppercase tracking-widest text-[#00d2ff]">Launch Portal →</div>
                 </div>
                 
+                {/* Landing Pages Card */}
                 <div className="bg-[#0f0f0f]/80 backdrop-blur-sm border border-gray-800 rounded-2xl p-6 hover:border-[#00d2ff]/60 hover:shadow-[0_0_30px_rgba(0,210,255,0.15)] hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden flex flex-col h-full justify-center">
                   <div className="absolute top-0 right-0 w-16 h-1 bg-gradient-to-l from-[#00d2ff] to-transparent opacity-50 group-hover:opacity-100 transition-opacity"></div>
                   <div className="text-[#00d2ff] mb-4 bg-[#00d2ff]/10 w-12 h-12 rounded-lg flex items-center justify-center border border-[#00d2ff]/20 group-hover:shadow-[0_0_15px_rgba(0,210,255,0.4)] transition-all">
@@ -147,7 +156,7 @@ function Home() {
                   <p className="text-gray-400 text-sm leading-relaxed">Lightning-fast, beautifully animated front-end pages built to capture leads and showcase your brand.</p>
                 </div>
 
-                {/* ===== THIS IS THE NEW CLICKABLE CARD WITH UPDATED NAME ===== */}
+                {/* Custom Webpages Gym Demo Card */}
                 <div 
                   onClick={() => navigate('/demo/gym')} 
                   className="cursor-pointer bg-[#0f0f0f]/80 backdrop-blur-sm border border-gray-800 rounded-2xl p-6 hover:border-[#00d2ff]/60 hover:shadow-[0_0_30px_rgba(0,210,255,0.15)] hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden flex flex-col h-full justify-center"
@@ -215,9 +224,7 @@ function Home() {
           </div>
         </main>
 
-        {/* ========================================== */}
-        {/* 3. FOOTER SECTION                            */}
-        {/* ========================================== */}
+        {/* 3. FOOTER SECTION */}
         <footer className="border-t border-gray-800/60 bg-[#0a0a0a]/80 backdrop-blur-md pt-16 pb-8 mt-10">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
